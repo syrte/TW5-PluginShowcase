@@ -1,7 +1,9 @@
 title: $:/plugins/EvidentlyCube/GoToShortcut/Template
 
 <header><$text text={{!!title}}/></header>
+<$list filter="[all[current]has[tags]]">
 <div class="lookup-tags"><$list filter="[all[current]tags[]sort[title]]" template="$:/core/ui/TagTemplate" storyview="pop"/></div>
+</$list>
 
 <ul>
 <li>''Modified:'' <$text text={{{ [all[current]get[modified]format:date[YYYY-0MM-0DD 0hh:0mm:0ss]] }}}/></li>
